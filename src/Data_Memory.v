@@ -9,7 +9,7 @@ module Data_Memory (
 
     reg [15:0] memory [0:65535];
 
-    always @(*) begin
+    always @(negedge CLK) begin
         if (MemRd) begin
             data_out = memory[address];
         end 
