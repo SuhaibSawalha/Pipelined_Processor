@@ -1,4 +1,6 @@
-module(
+`include "opcodes.v"
+
+module ALU_Control(
 	input      [3:0] Op,
 	input      [2:0] func,	
 	output reg [2:0] ALUop);		  
