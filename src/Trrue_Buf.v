@@ -1,8 +1,8 @@
-module True_Buf(input clk, input ret, output reg out);
+module True_Buf(input [15:0] in, input clk, input call, output reg [15:0] out);
 
     always @(posedge clk) begin
-        if (ret)
-            out = clk;
+        if (call)
+            out = in;
     end
 
 endmodule
